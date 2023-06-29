@@ -1,0 +1,83 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "create-package-cmake",
+			"type": "shell",     
+			"command": "source /opt/ros/humble/setup.bash && cd ${workspaceFolder}/src/ && ros2 pkg create test_cmake_package --build-type ament_cmake --dependencies rclcpp && cd .. && colcon build --symlink-install && source ${workspaceFolder}/install/setup.bash"
+		},		
+		{
+			"label": "create-package-python",
+			"type": "shell",
+			"command": "source /opt/ros/humble/setup.bash && cd ${workspaceFolder}/src/ && ros2 pkg create test_python_package --build-type ament_python --dependencies rclpy && cd .. && colcon build --symlink-install && source ${workspaceFolder}/install/setup.bash"
+		},	
+		{
+			"label": "ros-bag-play",
+			"type": "shell",
+			"command": "source /opt/ros/humble/setup.bash && ros2 bag play ${workspaceFolder}/src/ros2_cpp_pkg/bags/subset"
+		},							
+		{
+            "type": "colcon",
+            "args": [
+                "build",
+            ],
+            "problemMatcher": [
+                "$catkin-gcc"
+            ],
+            "group": "build",
+            "label": "colcon build"
+        },
+        {
+            "type": "colcon",
+            "args": [
+                "build",
+                "--symlink-install",
+            ],
+            "problemMatcher": [
+                "$catkin-gcc"
+            ],
+            "group": "build",
+            "label": "colcon build --symlink-install"
+        },
+        {
+            "type": "colcon",
+            "args": [
+            "build",
+            "--merge-install",
+            ],
+            "problemMatcher": [
+            "$catkin-gcc"
+            ],
+            "group": "build",
+            "label": "colcon build --merge-install"
+        },
+        {
+            "type": "colcon",
+            "args": [
+            "build",
+            "--packages-select",
+            "ros2_python_pkg",
+            ],
+            "problemMatcher": [
+            "$catkin-gcc"
+            ],
+            "group": "build",
+            "label": "colcon build --packages-select"
+        },
+        {
+            "type": "colcon",
+            "args": [
+            "test",
+            "--ctest-args",
+            "tests",
+            ],
+            "problemMatcher": [
+            "$catkin-gcc"
+            ],
+            "group": "build",
+            "label": "colcon_test"
+        },
+            
+                                        
+	]
+}

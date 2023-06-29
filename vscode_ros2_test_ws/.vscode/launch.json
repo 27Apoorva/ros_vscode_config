@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ROS: Multiple Launch",
+            "type": "ros",
+            "request": "launch",
+            "target": "/${workspaceFolder}/install/ros2_cpp_pkg/share/ros2_cpp_pkg/launch/launch_multiple_cpp_nodes.launch.py",
+            "launch": ["rviz", "gz", "gzserver", "gzclient"],
+        },
+        {
+            "name": "ROS: Launch",
+            "request": "launch",
+            "target": "${workspaceFolder}/install/ros2_cpp_pkg/share/ros2_cpp_pkg/launch/launch_cpp_node.launch.py",
+            "launch": ["rviz", "gz", "gzserver", "gzclient"],
+            "type": "ros"
+        }
+    ]
+}

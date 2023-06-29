@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/nilutpolk/vscode_ros2_test_ws/build/test_python_package",
+        "/home/nilutpolk/vscode_ros2_test_ws/install/test_python_package/lib/python3.10/site-packages",
+        "/home/nilutpolk/vscode_ros2_test_ws/build/ros2_python_pkg",
+        "/home/nilutpolk/vscode_ros2_test_ws/install/ros2_python_pkg/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/nilutpolk/vscode_ros2_test_ws/build/test_python_package",
+        "/home/nilutpolk/vscode_ros2_test_ws/install/test_python_package/lib/python3.10/site-packages",
+        "/home/nilutpolk/vscode_ros2_test_ws/build/ros2_python_pkg",
+        "/home/nilutpolk/vscode_ros2_test_ws/install/ros2_python_pkg/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+}
